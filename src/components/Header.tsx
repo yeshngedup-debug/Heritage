@@ -53,26 +53,41 @@ export default function Header() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            onClick={() => setIsOpen(false)}
             className="md:hidden fixed inset-0 bg-dark/95 backdrop-blur-lg flex items-center justify-center"
           >
-            <div className="flex flex-col items-center gap-8">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              onClick={(e) => e.stopPropagation()}
+              className="flex flex-col items-center gap-8"
+            >
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.href}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ delay: i * 0.1, duration: 0.3 }}
                 >
                   <Link
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-3xl text-cream/80 hover:text-cream transition-colors font-serif"
+                    className="text-2xl sm:text-3xl text-cream/80 hover:text-cream transition-colors font-serif"
                   >
                     {link.label}
                   </Link>
                 </motion.div>
               ))}
-            </div>
+            </motion.div>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-8 right-8 px-4 py-3 text-cream/40 text-xs tracking-widest uppercase hover:text-cream transition-colors font-mono"
+              aria-label="Close menu"
+            >
+              Close
+            </button>
           </motion.nav>
         )}
       </AnimatePresence>
