@@ -41,23 +41,23 @@ export default function GalleryGrid() {
 
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 bg-dark">
         {images.map((img, i) => (
           <motion.button
             key={i}
             layoutId={`gallery-${i}`}
             onClick={() => setSelected(i)}
-            className={`${img.aspect} rounded-xl overflow-hidden relative group cursor-pointer`}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
+            className={`${img.aspect} overflow-hidden relative group cursor-pointer`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: i * 0.05 }}
           >
             <div
-              className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+              className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
               style={{ backgroundImage: `url('${img.src}')` }}
             />
-            <div className="absolute inset-0 bg-dark/0 group-hover:bg-dark/40 transition-colors duration-300 flex items-end p-4">
-              <span className="text-cream font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute inset-0 bg-dark/0 group-hover:bg-dark/60 transition-colors duration-500 flex items-end p-6">
+              <span className="text-cream font-mono text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 {img.title}
               </span>
             </div>
@@ -70,14 +70,14 @@ export default function GalleryGrid() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           onClick={() => setSelected(null)}
-          className="fixed inset-0 z-50 bg-dark/90 flex items-center justify-center p-6 cursor-pointer"
+          className="fixed inset-0 z-50 bg-dark/95 flex items-center justify-center p-6 cursor-pointer"
         >
           <motion.div
             layoutId={`gallery-${selected}`}
-            className="max-w-4xl max-h-[90vh] rounded-2xl overflow-hidden"
+            className="max-w-5xl max-h-[90vh] overflow-hidden"
           >
             <div
-              className="w-[80vw] h-[60vh] bg-contain bg-center bg-no-repeat"
+              className="w-[85vw] md:w-[70vw] h-[60vh] bg-contain bg-center bg-no-repeat"
               style={{
                 backgroundImage: `url('${images[selected].src}')`,
               }}
@@ -85,9 +85,9 @@ export default function GalleryGrid() {
           </motion.div>
           <button
             onClick={() => setSelected(null)}
-            className="absolute top-6 right-6 text-cream text-3xl hover:text-gold transition-colors"
+            className="absolute top-8 right-8 text-cream/60 text-sm tracking-widest uppercase hover:text-cream transition-colors font-mono"
           >
-            ✕
+            Close
           </button>
         </motion.div>
       )}

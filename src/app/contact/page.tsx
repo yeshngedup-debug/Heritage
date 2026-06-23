@@ -5,30 +5,40 @@ export default function ContactPage() {
   return (
     <>
       <Header />
-      <main className="pt-24 min-h-screen">
-        <section className="py-24 md:py-32">
-          <div className="mx-auto max-w-3xl px-6">
-            <span className="text-gold text-sm tracking-[0.2em] uppercase">
-              Contact
+      <main className="min-h-screen bg-dark">
+        <section className="pt-44 pb-28 md:pb-40">
+          <div className="mx-auto max-w-4xl px-8">
+            <span className="section-number flex items-center gap-3 mb-8">
+              <span className="text-gold font-mono text-sm tracking-[0.2em]">04</span>
+              <span className="h-px w-8 bg-gold/30" />
+              <span className="text-cream/40 text-xs tracking-[0.2em] uppercase">Contact</span>
             </span>
-            <h1 className="font-serif text-4xl md:text-6xl text-dark leading-tight mt-4">
-              Get in Touch
+            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-cream leading-[1.1] tracking-tight mb-12">
+              Get in
+              <br />
+              <span className="text-gold">Touch</span>
             </h1>
-            <div className="w-16 h-0.5 bg-gold my-8" />
-            <p className="text-dark/70 leading-relaxed mb-12">
-              For inquiries about visiting Phudro Goenpa, research, or heritage
+            <p className="text-cream/50 text-base md:text-lg max-w-xl leading-relaxed mb-16">
+              For inquiries about visiting Phudro Goenpa, research collaborations, or heritage
             </p>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-4 p-6 rounded-xl border border-stone/20">
-                <span className="text-2xl">📍</span>
-                <h3 className="font-serif text-xl text-dark">Location</h3>
-                <p className="text-dark/60">Paro Valley, Bhutan</p>
-              </div>
-              <div className="space-y-4 p-6 rounded-xl border border-stone/20">
-                <span className="text-2xl">✉️</span>
-                <h3 className="font-serif text-xl text-dark">Email</h3>
-                <p className="text-dark/60">hello@phudrogoenpa.heritage</p>
-              </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                { icon: "→", title: "Location", desc: "Paro Valley, Bhutan" },
+                { icon: "→", title: "Email", desc: "hello@phudrogoenpa.heritage" },
+                { icon: "→", title: "Phone", desc: "+975 17 323 883" },
+                { icon: "→", title: "Social", desc: "Instagram / Facebook" },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="border border-cream/10 p-8 space-y-3 hover:border-gold/30 transition-colors group"
+                >
+                  <span className="text-gold text-sm font-mono group-hover:translate-x-1 transition-transform inline-block">
+                    {item.icon}
+                  </span>
+                  <h3 className="font-serif text-xl text-cream">{item.title}</h3>
+                  <p className="text-cream/40 text-sm">{item.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

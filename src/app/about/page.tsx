@@ -5,17 +5,20 @@ export default function AboutPage() {
   return (
     <>
       <Header />
-      <main className="pt-24 min-h-screen">
-        <section className="py-24 md:py-32">
-          <div className="mx-auto max-w-3xl px-6">
-            <span className="text-gold text-sm tracking-[0.2em] uppercase">
-              About
+      <main className="min-h-screen bg-dark">
+        <section className="pt-44 pb-28 md:pb-40">
+          <div className="mx-auto max-w-4xl px-8">
+            <span className="section-number flex items-center gap-3 mb-8">
+              <span className="text-gold font-mono text-sm tracking-[0.2em]">01</span>
+              <span className="h-px w-8 bg-gold/30" />
+              <span className="text-cream/40 text-xs tracking-[0.2em] uppercase">About</span>
             </span>
-            <h1 className="font-serif text-4xl md:text-6xl text-dark leading-tight mt-4">
-              The History of Phudro Goenpa
+            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-cream leading-[1.1] tracking-tight mb-12">
+              The History of
+              <br />
+              <span className="text-gold">Phudro Goenpa</span>
             </h1>
-            <div className="w-16 h-0.5 bg-gold my-8" />
-            <div className="space-y-6 text-dark/70 leading-relaxed">
+            <div className="space-y-6 text-cream/50 leading-relaxed text-base md:text-lg max-w-3xl">
               <p>
                 Phudro Goenpa is an ancient Bhutanese Buddhist monastery nestled
                 on a high mountain ridge in the Paro Valley. Its dramatic

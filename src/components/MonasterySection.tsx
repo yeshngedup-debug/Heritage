@@ -3,16 +3,16 @@
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 
-function FadeInSection({ children }: { children: React.ReactNode }) {
+function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const isInView = useInView(ref, { once: true, margin: "-80px" })
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 60 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
-      transition={{ duration: 0.7 }}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.7, delay, ease: [0.25, 0.1, 0.25, 1] }}
     >
       {children}
     </motion.div>
@@ -20,52 +20,52 @@ function FadeInSection({ children }: { children: React.ReactNode }) {
 }
 
 export default function MonasterySection() {
-  const ref = useRef(null)
-
   return (
-    <section id="about" ref={ref} className="bg-cream py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          <FadeInSection>
-            <div className="space-y-6">
-              <span className="text-gold text-sm tracking-[0.2em] uppercase">
-                The Monastery
+    <section id="about" className="bg-cream py-28 md:py-40">
+      <div className="mx-auto max-w-7xl px-8">
+        <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+          <FadeIn>
+            <div className="space-y-8">
+              <span className="section-number flex items-center gap-3">
+                <span className="text-gold font-mono text-sm tracking-[0.2em]">01</span>
+                <span className="h-px w-8 bg-gold/40" />
+                <span className="text-stone text-xs tracking-[0.2em] uppercase">The Monastery</span>
               </span>
-              <h2 className="font-serif text-3xl md:text-5xl text-dark leading-tight">
-                A Sanctuary in the Clouds
+              <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-dark leading-[1.1] tracking-tight">
+                A Sanctuary
+                <br />
+                <span className="text-maroon">in the Clouds</span>
               </h2>
-              <div className="w-16 h-0.5 bg-gold" />
-              <p className="text-dark/70 leading-relaxed">
-                High on a rugged limestone mountain ridge overlooking the Paro
-                Valley, Phudro Goenpa has stood for centuries as a beacon of
-                Bhutanese Buddhist heritage. The monastery&apos;s white-washed
-                stone walls, intricate red and gold wooden window frames, and
-                shining golden pinnacle rise dramatically against the vast
-                Himalayan sky.
-              </p>
-              <p className="text-dark/70 leading-relaxed">
-                Surrounded by deep green pine forests and often wrapped in
-                morning mist, the monastery offers a rare glimpse into the
-                serene spiritual traditions that have shaped Bhutan&apos;s
-                cultural identity.
-              </p>
+              <div className="space-y-5 text-dark/60 leading-relaxed text-base md:text-lg">
+                <p>
+                  High on a rugged limestone mountain ridge overlooking the Paro
+                  Valley, Phudro Goenpa has stood for centuries as a beacon of
+                  Bhutanese Buddhist heritage.
+                </p>
+                <p>
+                  The monastery&apos;s white-washed stone walls, intricate red and
+                  gold wooden window frames, and shining golden pinnacle rise
+                  dramatically against the vast Himalayan sky — a testament to
+                  the enduring spirit of Himalayan spirituality.
+                </p>
+              </div>
             </div>
-          </FadeInSection>
+          </FadeIn>
 
-          <FadeInSection>
+          <FadeIn delay={0.15}>
             <div className="relative">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="aspect-[4/5] overflow-hidden">
                 <div
-                  className="w-full h-full bg-cover bg-center"
+                  className="w-full h-full bg-cover bg-center hover:scale-105 transition-transform duration-700"
                   style={{
                     backgroundImage:
                       "url('https://images.unsplash.com/photo-1621886292650-520f76c747d6?q=80&w=2070&auto=format&fit=crop')",
                   }}
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 border-2 border-gold/30 rounded-xl hidden md:block" />
+              <div className="absolute -bottom-4 -left-4 w-24 h-24 border border-gold/30" />
             </div>
-          </FadeInSection>
+          </FadeIn>
         </div>
       </div>
     </section>

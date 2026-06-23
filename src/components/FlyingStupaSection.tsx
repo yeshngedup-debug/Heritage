@@ -3,16 +3,16 @@
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 
-function FadeInSection({ children }: { children: React.ReactNode }) {
+function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const isInView = useInView(ref, { once: true, margin: "-80px" })
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 60 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
-      transition={{ duration: 0.7 }}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.7, delay, ease: [0.25, 0.1, 0.25, 1] }}
     >
       {children}
     </motion.div>
@@ -21,38 +21,43 @@ function FadeInSection({ children }: { children: React.ReactNode }) {
 
 export default function FlyingStupaSection() {
   return (
-    <section className="bg-cream py-24 md:py-32 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          <FadeInSection>
-            <div className="space-y-6">
-              <span className="text-gold text-sm tracking-[0.2em] uppercase">
-                Sacred Legend
+    <section className="bg-cream py-28 md:py-40 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-8">
+        <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+          <FadeIn>
+            <div className="space-y-8">
+              <span className="section-number flex items-center gap-3">
+                <span className="text-gold font-mono text-sm tracking-[0.2em]">03</span>
+                <span className="h-px w-8 bg-gold/40" />
+                <span className="text-stone text-xs tracking-[0.2em] uppercase">Sacred Legend</span>
               </span>
-              <h2 className="font-serif text-3xl md:text-5xl text-dark leading-tight">
-                The Legend of the Flying Stupa
+              <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-dark leading-[1.1] tracking-tight">
+                The Legend of
+                <br />
+                <span className="text-maroon">the Flying Stupa</span>
               </h2>
-              <div className="w-16 h-0.5 bg-gold" />
-              <p className="text-dark/70 leading-relaxed">
-                Ancient lore tells of a sacred stone stupa that once floated
-                serenely above the monastery, suspended in the clouds above the
-                mountain ridge. Rays of divine golden light would pierce through
-                the mist, illuminating the sacred structure.
-              </p>
-              <p className="text-dark/70 leading-relaxed">
-                To this day, travelers speak of strange lights and ethereal
-                shapes seen drifting above the ridge at dawn — a living legend
-                that continues to inspire pilgrims and visitors alike.
-              </p>
+              <div className="space-y-5 text-dark/60 leading-relaxed text-base md:text-lg">
+                <p>
+                  Ancient lore tells of a sacred stone stupa that once floated
+                  serenely above the monastery, suspended in the clouds above the
+                  mountain ridge.
+                </p>
+                <p>
+                  Rays of divine golden light would pierce through the mist,
+                  illuminating the sacred structure. To this day, travelers speak
+                  of strange lights and ethereal shapes drifting above the ridge
+                  at dawn.
+                </p>
+              </div>
             </div>
-          </FadeInSection>
+          </FadeIn>
 
-          <FadeInSection>
+          <FadeIn delay={0.15}>
             <div className="relative">
               <motion.div
-                animate={{ y: [0, -15, 0] }}
-                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                className="aspect-square rounded-2xl overflow-hidden shadow-2xl"
+                animate={{ y: [0, -12, 0] }}
+                transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+                className="aspect-square overflow-hidden"
               >
                 <div
                   className="w-full h-full bg-cover bg-center"
@@ -62,9 +67,9 @@ export default function FlyingStupaSection() {
                   }}
                 />
               </motion.div>
-              <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-gold/10 blur-2xl" />
+              <div className="absolute -top-8 -right-8 w-40 h-40 rounded-full bg-gold/5 blur-3xl" />
             </div>
-          </FadeInSection>
+          </FadeIn>
         </div>
       </div>
     </section>

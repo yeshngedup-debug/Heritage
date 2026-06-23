@@ -15,21 +15,20 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-cream/90 backdrop-blur-md border-b border-stone/20">
-      <div className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="text-2xl">☸</span>
-          <span className="font-serif text-xl font-bold text-maroon">
-            Phudro Goenpa
+    <header className="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
+      <div className="mx-auto max-w-7xl flex items-center justify-between px-8 py-6">
+        <Link href="/" className="flex items-center gap-2 group">
+          <span className="text-cream/80 text-lg tracking-[0.2em] font-mono group-hover:text-cream transition-colors">
+            PHUDRO GOENPA
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-dark/70 hover:text-maroon transition-colors"
+              className="text-sm text-cream/60 hover:text-cream transition-colors tracking-wider uppercase"
             >
               {link.label}
             </Link>
@@ -41,39 +40,36 @@ export default function Header() {
           className="md:hidden flex flex-col gap-1.5 p-2"
           aria-label="Toggle menu"
         >
-          <motion.span
-            animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-            className="block h-0.5 w-6 bg-dark"
-          />
-          <motion.span
-            animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
-            className="block h-0.5 w-6 bg-dark"
-          />
-          <motion.span
-            animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-            className="block h-0.5 w-6 bg-dark"
-          />
+          <span className={`block h-px w-6 bg-cream transition-all ${isOpen ? "rotate-45 translate-y-1" : ""}`} />
+          <span className={`block h-px w-6 bg-cream transition-all ${isOpen ? "opacity-0" : ""}`} />
+          <span className={`block h-px w-6 bg-cream transition-all ${isOpen ? "-rotate-45 -translate-y-1" : ""}`} />
         </button>
       </div>
 
       <AnimatePresence>
         {isOpen && (
           <motion.nav
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="md:hidden overflow-hidden bg-cream border-b border-stone/20"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="md:hidden fixed inset-0 bg-dark/95 backdrop-blur-lg flex items-center justify-center"
           >
-            <div className="flex flex-col px-6 pb-6 gap-4">
-              {navLinks.map((link) => (
-                <Link
+            <div className="flex flex-col items-center gap-8">
+              {navLinks.map((link, i) => (
+                <motion.div
                   key={link.href}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-lg font-medium text-dark/70 hover:text-maroon transition-colors"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
                 >
-                  {link.label}
-                </Link>
+                  <Link
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-3xl text-cream/80 hover:text-cream transition-colors font-serif"
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </motion.nav>

@@ -2,20 +2,34 @@
 
 :root {
   --maroon: #800020;
+  --maroon-light: #A52A2A;
   --gold: #D4AF37;
+  --gold-light: #E8C84A;
   --cream: #FFF8E7;
+  --cream-dark: #F5EDD6;
   --dark: #1A0F0A;
+  --dark-soft: #2A1F1A;
   --stone: #8B7D6B;
+  --stone-light: #A89880;
   --saffron: #F4A900;
+  --charcoal: #1A1A1A;
+  --border-light: rgba(139, 125, 107, 0.15);
+  --border-dark: rgba(255, 248, 231, 0.1);
 }
 
 @theme inline {
   --color-maroon: var(--maroon);
+  --color-maroon-light: var(--maroon-light);
   --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
   --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
   --color-dark: var(--dark);
+  --color-dark-soft: var(--dark-soft);
   --color-stone: var(--stone);
+  --color-stone-light: var(--stone-light);
   --color-saffron: var(--saffron);
+  --color-charcoal: var(--charcoal);
   --font-sans: var(--font-geist-sans);
   --font-serif: var(--font-playfair);
 }
@@ -27,4 +41,16 @@ html {
 body {
   background: var(--cream);
   color: var(--dark);
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--dark);
+}
+
+.section-number {
+  font-family: var(--font-geist-mono, monospace);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
 }
