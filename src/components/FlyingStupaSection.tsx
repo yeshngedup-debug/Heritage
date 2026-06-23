@@ -1,25 +1,11 @@
-'use client'
+"use client"
 
-import { motion, useInView } from "framer-motion"
-import { useRef } from "react"
-
-function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-80px" })
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.7, delay, ease: [0.25, 0.1, 0.25, 1] }}
-    >
-      {children}
-    </motion.div>
-  )
-}
+import { motion } from "framer-motion"
+import FadeIn from "@/components/FadeIn"
+import { useReducedMotion } from "@/hooks/useReducedMotion"
 
 export default function FlyingStupaSection() {
+  const prefersReduced = useReducedMotion()
   return (
     <section className="bg-cream py-28 md:py-40 overflow-hidden">
       <div className="mx-auto max-w-7xl px-8">
@@ -55,7 +41,7 @@ export default function FlyingStupaSection() {
           <FadeIn delay={0.15}>
             <div className="relative">
               <motion.div
-                animate={{ y: [0, -12, 0] }}
+                animate={prefersReduced ? {} : { y: [0, -12, 0] }}
                 transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
                 className="aspect-square overflow-hidden"
               >

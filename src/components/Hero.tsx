@@ -2,9 +2,11 @@
 
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
+import { useReducedMotion } from "@/hooks/useReducedMotion"
 
 export default function Hero() {
   const ref = useRef(null)
+  const prefersReduced = useReducedMotion()
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -14,7 +16,7 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.9], [1, 0])
 
   return (
-    <section ref={ref} className="relative h-[100vh] overflow-hidden">
+    <section ref={ref} className="relative h-dvh overflow-hidden">
       <motion.div style={{ y }} className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-dark/70 via-dark/40 to-dark z-10" />
         <div
@@ -88,7 +90,7 @@ export default function Hero() {
         className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20"
       >
         <motion.div
-          animate={{ y: [0, 6, 0] }}
+          animate={prefersReduced ? {} : { y: [0, 6, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
           className="flex flex-col items-center gap-2 text-cream/40 text-xs tracking-widest uppercase"
         >

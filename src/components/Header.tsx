@@ -15,8 +15,8 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
-      <div className="mx-auto max-w-7xl flex items-center justify-between px-8 py-6">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-dark/70 backdrop-blur-md">
+      <div className="mx-auto max-w-7xl flex items-center justify-between px-8 py-5">
         <Link href="/" className="flex items-center gap-2 group">
           <span className="text-cream/80 text-lg tracking-[0.2em] font-mono group-hover:text-cream transition-colors">
             PHUDRO GOENPA
@@ -39,6 +39,7 @@ export default function Header() {
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden flex flex-col gap-1.5 p-2"
           aria-label="Toggle menu"
+          aria-expanded={isOpen}
         >
           <span className={`block h-px w-6 bg-cream transition-all ${isOpen ? "rotate-45 translate-y-1" : ""}`} />
           <span className={`block h-px w-6 bg-cream transition-all ${isOpen ? "opacity-0" : ""}`} />

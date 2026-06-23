@@ -19,7 +19,7 @@ export default function ContactPage() {
               <span className="text-gold">Touch</span>
             </h1>
             <p className="text-cream/50 text-base md:text-lg max-w-xl leading-relaxed mb-16">
-              For inquiries about visiting Phudro Goenpa, research collaborations, or heritage
+              For inquiries about visiting Phudro Goenpa, research collaborations, or heritage preservation
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               {[

@@ -1,5 +1,11 @@
 import Link from "next/link"
 
+const socialLinks = [
+  { label: "Facebook", href: "#" },
+  { label: "Instagram", href: "#" },
+  { label: "YouTube", href: "#" },
+]
+
 export default function Footer() {
   return (
     <footer className="bg-dark border-t border-cream/5">
@@ -14,13 +20,15 @@ export default function Footer() {
               limestone ridge of the Paro Valley.
             </p>
             <div className="flex gap-4">
-              {["FB", "IG", "YT"].map((s) => (
-                <span
-                  key={s}
-                  className="w-9 h-9 border border-cream/10 flex items-center justify-center text-cream/40 text-xs hover:border-gold/50 hover:text-gold transition-colors cursor-pointer"
+              {socialLinks.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  aria-label={s.label}
+                  className="w-9 h-9 border border-cream/10 flex items-center justify-center text-cream/40 text-xs hover:border-gold/50 hover:text-gold transition-colors"
                 >
-                  {s}
-                </span>
+                  {s.label.charAt(0)}
+                </a>
               ))}
             </div>
           </div>
