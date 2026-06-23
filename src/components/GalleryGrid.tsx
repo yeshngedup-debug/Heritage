@@ -30,7 +30,7 @@ const images = [
     aspect: "aspect-square",
   },
   {
-    src: "/images/sections/Jomolhari.jpg",
+    src: "/images/gallery/Jomolhari.jpg",
     title: "Mount Jomolhari",
     aspect: "aspect-[4/3]",
   },
