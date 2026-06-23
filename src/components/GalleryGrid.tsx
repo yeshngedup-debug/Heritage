@@ -30,8 +30,8 @@ const images = [
     aspect: "aspect-square",
   },
   {
-    src: "https://images.unsplash.com/photo-1604537466573-5e94508fd243?q=80&w=600&auto=format&fit=crop",
-    title: "Mountain Mist",
+    src: "/images/gallery/Clouds.jpg",
+    title: "Clouds Over the Valley",
     aspect: "aspect-[4/3]",
   },
 ]

@@ -49,7 +49,7 @@ export default function FlyingStupaSection() {
                   className="w-full h-full bg-cover bg-center"
                   style={{
                     backgroundImage:
-                      "url('/images/sections/Jomolhari.jpg')",
+                      "url('/images/sections/flyingSyupa.jpg')",
                   }}
                 />
               </motion.div>
