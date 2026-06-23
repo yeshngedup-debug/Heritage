@@ -70,13 +70,13 @@ export default function Hero() {
         >
           <a
             href="#about"
-            className="px-8 py-3.5 bg-gold text-dark text-sm font-medium tracking-wider uppercase hover:bg-gold/90 transition-all"
+            className="px-8 py-4 bg-gold text-dark text-sm font-medium tracking-wider uppercase hover:bg-gold/90 transition-all"
           >
             Explore
           </a>
           <a
             href="/gallery"
-            className="px-8 py-3.5 border border-cream/20 text-cream text-sm font-medium tracking-wider uppercase hover:bg-cream/5 transition-all"
+            className="px-8 py-4 border border-cream/20 text-cream text-sm font-medium tracking-wider uppercase hover:bg-cream/5 transition-all"
           >
             Gallery
           </a>

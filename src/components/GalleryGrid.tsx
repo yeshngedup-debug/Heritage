@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const images = [
   { src: "/images/gallery/Goenpa.jpg", title: "Phudro Goenpa Monastery" },
@@ -15,6 +15,14 @@ const images = [
 
 export default function GalleryGrid() {
   const [selected, setSelected] = useState<number | null>(null)
+
+  useEffect(() => {
+    if (selected !== null) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = ""
+    }
+  }, [selected])
 
   return (
     <>
@@ -34,6 +42,7 @@ export default function GalleryGrid() {
               fill
               src={img.src}
               alt={img.title}
+              unoptimized
               className="object-cover transition-transform duration-700 group-hover:scale-110"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
@@ -65,13 +74,14 @@ export default function GalleryGrid() {
                 fill
                 src={images[selected].src}
                 alt={images[selected].title}
+                unoptimized
                 className="object-contain"
                 sizes="70vw"
               />
             </motion.div>
             <button
               onClick={(e) => { e.stopPropagation(); setSelected(null) }}
-              className="absolute top-8 right-8 text-cream/60 text-sm tracking-widest uppercase hover:text-cream transition-colors font-mono"
+              className="absolute top-8 right-8 px-4 py-3 text-cream/60 text-sm tracking-widest uppercase hover:text-cream transition-colors font-mono"
               aria-label="Close lightbox"
             >
               Close
