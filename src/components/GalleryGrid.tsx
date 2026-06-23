@@ -16,7 +16,7 @@ const images = [
   },
   {
     src: "/images/gallery/CloudPlayerFlagDongkolaLhakhang.jpg",
-    title: "Prayer Flags at Dongkola Lhakhang",
+    title: "View of Dongkola Lhakhang from Phudro Goenpa",
     aspect: "aspect-[3/4]",
   },
   {
