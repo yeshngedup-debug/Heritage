@@ -10,23 +10,23 @@ const images = [
     aspect: "aspect-[4/3]",
   },
   {
-    src: "/images/gallery/carrying%20firewoods.jpg",
+    src: "/images/gallery/CarryingFirewoods.jpg",
     title: "Life in the Paro Valley",
     aspect: "aspect-square",
   },
   {
-    src: "https://images.unsplash.com/photo-1580743880636-e4a6c07f5c22?q=80&w=600&auto=format&fit=crop",
-    title: "Stone Pillar",
+    src: "/images/gallery/CloudPlayerFlagDongkolaLhakhang.jpg",
+    title: "Prayer Flags at Dongkola Lhakhang",
     aspect: "aspect-[3/4]",
   },
   {
-    src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=600&auto=format&fit=crop",
-    title: "Himalayan Sunrise",
+    src: "/images/gallery/SunsetsParyerFlag.jpg",
+    title: "Sunset Prayer Flags",
     aspect: "aspect-[4/3]",
   },
   {
-    src: "https://images.unsplash.com/photo-1592201913732-63d4d6e08b07?q=80&w=600&auto=format&fit=crop",
-    title: "Prayer Flags",
+    src: "/images/gallery/NightViewofParoValley.jpg",
+    title: "Paro Valley Night View",
     aspect: "aspect-square",
   },
   {

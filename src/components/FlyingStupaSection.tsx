@@ -49,7 +49,7 @@ export default function FlyingStupaSection() {
                   className="w-full h-full bg-cover bg-center"
                   style={{
                     backgroundImage:
-                      "url('https://images.unsplash.com/photo-1618366712010-f4ae2c3b6c7f?q=80&w=1974&auto=format&fit=crop')",
+                      "url('/images/sections/Jomolhari.jpg')",
                   }}
                 />
               </motion.div>
