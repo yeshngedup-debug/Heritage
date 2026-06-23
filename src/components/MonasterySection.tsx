@@ -40,7 +40,7 @@ export default function MonasterySection() {
                   className="w-full h-full bg-cover bg-center hover:scale-105 transition-transform duration-700"
                   style={{
                     backgroundImage:
-                      "url('/images/gallery/Goenpa.jpg')",
+                      "url('/images/sections/Cloud.jpg')",
                   }}
                 />
               </div>
