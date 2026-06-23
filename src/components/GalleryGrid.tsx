@@ -5,13 +5,13 @@ import { useState } from "react"
 
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1621886292650-520f76c747d6?q=80&w=600&auto=format&fit=crop",
-    title: "Monastery Ridge",
+    src: "/images/gallery/Goenpa.jpg",
+    title: "Phudro Goenpa Monastery",
     aspect: "aspect-[4/3]",
   },
   {
-    src: "https://images.unsplash.com/photo-1618366712010-f4ae2c3b6c7f?q=80&w=600&auto=format&fit=crop",
-    title: "Stupa at Dawn",
+    src: "/images/gallery/carrying%20firewoods.jpg",
+    title: "Life in the Paro Valley",
     aspect: "aspect-square",
   },
   {

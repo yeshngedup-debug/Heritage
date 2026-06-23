@@ -12,7 +12,7 @@ export default function StonePillarSection() {
                   className="w-full h-full bg-cover bg-center hover:scale-105 transition-transform duration-700"
                   style={{
                     backgroundImage:
-                      "url('https://images.unsplash.com/photo-1580743880636-e4a6c07f5c22?q=80&w=1974&auto=format&fit=crop')",
+                      "url('/images/sections/StonePillar.JPG')",
                   }}
                 />
               </div>

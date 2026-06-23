@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   title: "Phudro Goenpa | Sacred Heritage of Bhutan",
   description:
     "Discover Phudro Goenpa, an ancient Bhutanese Buddhist monastery perched on a limestone mountain ridge in the Paro Valley. Explore its history, legends, and spiritual significance.",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({
