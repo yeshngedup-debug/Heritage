@@ -37,7 +37,7 @@ export default function MonasterySection() {
             <div className="relative">
               <div className="aspect-[4/5] overflow-hidden">
                 <div
-                  className="w-full h-full bg-cover bg-center hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full bg-cover bg-bottom hover:scale-105 transition-transform duration-700"
                   style={{
                     backgroundImage:
                       "url('/images/sections/Cloud.jpg')",

@@ -1,39 +1,16 @@
 'use client'
 
+import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
 
 const images = [
-  {
-    src: "/images/gallery/Goenpa.jpg",
-    title: "Phudro Goenpa Monastery",
-    aspect: "aspect-[4/3]",
-  },
-  {
-    src: "/images/gallery/CarryingFirewoods.jpg",
-    title: "Life in the Paro Valley",
-    aspect: "aspect-square",
-  },
-  {
-    src: "/images/gallery/CloudPlayerFlagDongkolaLhakhang.jpg",
-    title: "View of Dongkola Lhakhang from Phudro Goenpa",
-    aspect: "aspect-[3/4]",
-  },
-  {
-    src: "/images/gallery/SunsetsParyerFlag.jpg",
-    title: "Sunset Prayer Flags",
-    aspect: "aspect-[4/3]",
-  },
-  {
-    src: "/images/gallery/NightViewofParoValley.jpg",
-    title: "Paro Valley Night View",
-    aspect: "aspect-square",
-  },
-  {
-    src: "/images/gallery/Jomolhari.jpg",
-    title: "Mount Jomolhari",
-    aspect: "aspect-[4/3]",
-  },
+  { src: "/images/gallery/Goenpa.jpg", title: "Phudro Goenpa Monastery" },
+  { src: "/images/gallery/CarryingFirewoods.jpg", title: "Life in the Paro Valley" },
+  { src: "/images/gallery/CloudPlayerFlagDongkolaLhakhang.jpg", title: "View of Dongkola Lhakhang from Phudro Goenpa" },
+  { src: "/images/gallery/SunsetsParyerFlag.jpg", title: "Sunset Prayer Flags" },
+  { src: "/images/gallery/NightViewofParoValley.jpg", title: "Paro Valley Night View" },
+  { src: "/images/gallery/Jomolhari.jpg", title: "Mount Jomolhari" },
 ]
 
 export default function GalleryGrid() {
@@ -44,19 +21,21 @@ export default function GalleryGrid() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 bg-dark">
         {images.map((img, i) => (
           <motion.button
-            key={i}
+            key={img.src}
             layoutId={`gallery-${i}`}
             layout
             onClick={() => setSelected(i)}
-            className={`${img.aspect} overflow-hidden relative group cursor-pointer`}
+            className="aspect-[2/1] overflow-hidden relative group cursor-pointer"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: i * 0.05 }}
           >
-            <img
+            <Image
+              fill
               src={img.src}
               alt={img.title}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              className="object-cover transition-transform duration-700 group-hover:scale-110"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
             <div className="absolute inset-0 bg-dark/0 group-hover:bg-dark/60 transition-colors duration-500 flex items-end p-6">
               <span className="text-cream font-mono text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -80,12 +59,14 @@ export default function GalleryGrid() {
             <motion.div
               layoutId={`gallery-${selected}`}
               layout
-              className="max-w-5xl max-h-[90vh] overflow-hidden"
+              className="relative w-[85vw] md:w-[70vw] h-[60vh]"
             >
-              <img
+              <Image
+                fill
                 src={images[selected].src}
                 alt={images[selected].title}
-                className="w-[85vw] md:w-[70vw] h-[60vh] object-contain"
+                className="object-contain"
+                sizes="70vw"
               />
             </motion.div>
             <button
