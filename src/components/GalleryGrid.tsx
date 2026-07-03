@@ -27,25 +27,25 @@ export default function GalleryGrid() {
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 bg-dark">
-        {images.map((img, i) => (
-          <motion.button
-            key={img.src}
-            layoutId={`gallery-${i}`}
-            layout
-            onClick={() => setSelected(i)}
-            className="aspect-[2/1] overflow-hidden relative group cursor-pointer"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: i * 0.05 }}
-          >
-            <Image
-              fill
-              src={img.src}
-              alt={img.title}
-              unoptimized
-              className="object-cover transition-transform duration-700 group-hover:scale-110"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            />
+          {images.map((img, i) => (
+            <motion.button
+              key={img.src}
+              layoutId={`gallery-${i}`}
+              layout
+              onClick={() => setSelected(i)}
+              className="aspect-[2/1] overflow-hidden relative group cursor-pointer"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: i * 0.05 }}
+            >
+              <Image
+                fill
+                src={img.src}
+                alt={img.title}
+                loading={i < 2 ? "eager" : "lazy"}
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
             <div className="absolute inset-0 bg-dark/0 group-hover:bg-dark/60 transition-colors duration-500 flex items-end p-6">
               <span className="text-cream font-mono text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 {img.title}
@@ -74,7 +74,6 @@ export default function GalleryGrid() {
                 fill
                 src={images[selected].src}
                 alt={images[selected].title}
-                unoptimized
                 className="object-contain"
                 sizes="70vw"
               />

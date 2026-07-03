@@ -1,5 +1,11 @@
+import type { Metadata } from "next"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+
+export const metadata: Metadata = {
+  title: "Contact | Phudro Goenpa",
+  description: "Get in touch with Phudro Goenpa heritage for visiting inquiries, research collaborations, and preservation.",
+}
 
 export default function ContactPage() {
   return (
@@ -23,10 +29,10 @@ export default function ContactPage() {
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               {[
-                { icon: "→", title: "Location", desc: "Paro Valley, Bhutan" },
-                { icon: "→", title: "Email", desc: "hello@phudrogoenpa.heritage" },
-                { icon: "→", title: "Phone", desc: "+975 17 323 883" },
-                { icon: "→", title: "Social", desc: "Instagram / Facebook" },
+                { icon: "↗", title: "Location", desc: "Paro Valley, Bhutan" },
+                { icon: "↗", title: "Email", desc: "hello@phudrogoenpa.heritage" },
+                { icon: "↗", title: "Phone", desc: "+975 17 323 883" },
+                { icon: "↗", title: "Social", desc: "Instagram / Facebook" },
               ].map((item) => (
                 <div
                   key={item.title}

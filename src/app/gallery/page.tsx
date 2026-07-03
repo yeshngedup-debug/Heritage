@@ -1,6 +1,12 @@
+import type { Metadata } from "next"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import GalleryGrid from "@/components/GalleryGrid"
+
+export const metadata: Metadata = {
+  title: "Gallery | Phudro Goenpa",
+  description: "Explore the visual journey of Phudro Goenpa — sacred monastery, prayer flags, Himalayan views, and Paro Valley.",
+}
 
 export default function GalleryPage() {
   return (

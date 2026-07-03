@@ -1,19 +1,21 @@
 "use client"
 
-import { useReducer, useEffect } from "react"
+import { useSyncExternalStore } from "react"
+
+function getServerSnapshot() {
+  return false
+}
+
+function getSnapshot() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches
+}
+
+function subscribe(callback: () => void) {
+  const mq = window.matchMedia("(prefers-reduced-motion: reduce)")
+  mq.addEventListener("change", callback)
+  return () => mq.removeEventListener("change", callback)
+}
 
 export function useReducedMotion(): boolean {
-  const [prefersReduced, dispatch] = useReducer(
-    (_state: boolean, event: MediaQueryListEvent | MediaQueryList) => event.matches,
-    false,
-  )
-
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)")
-    dispatch(mq)
-    mq.addEventListener("change", dispatch)
-    return () => mq.removeEventListener("change", dispatch)
-  }, [])
-
-  return prefersReduced
+  return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot)
 }

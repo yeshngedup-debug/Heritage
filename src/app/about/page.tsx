@@ -1,5 +1,11 @@
+import type { Metadata } from "next"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+
+export const metadata: Metadata = {
+  title: "About | Phudro Goenpa",
+  description: "Learn about the history of Phudro Goenpa, an ancient Bhutanese Buddhist monastery in the Paro Valley.",
+}
 
 export default function AboutPage() {
   return (

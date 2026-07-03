@@ -26,6 +26,8 @@ export default function Footer() {
                   href={s.href}
                   aria-label={s.label}
                   className="w-11 h-11 border border-cream/10 flex items-center justify-center text-cream/40 text-xs hover:border-gold/50 hover:text-gold transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {s.label.charAt(0)}
                 </a>
@@ -70,8 +72,8 @@ export default function Footer() {
         <div className="mt-16 pt-8 border-t border-cream/5 flex flex-col md:flex-row items-center justify-between gap-4 text-cream/30 text-xs">
           <p>&copy; {new Date().getFullYear()} Phudro Goenpa Heritage. All rights reserved.</p>
           <div className="flex gap-6">
-            <span>Privacy Policy</span>
-            <span>Terms of Service</span>
+            <Link href="/privacy" className="hover:text-cream/60 transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-cream/60 transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
