@@ -3,28 +3,15 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
+import StaggeredMenu from "@/components/StaggeredMenu"
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/gallery", label: "Gallery" },
-  { href: "/contact", label: "Contact" },
+  { label: "Home", ariaLabel: "Go to home page", link: "/" },
+  { label: "About", ariaLabel: "Learn about us", link: "/about" },
+  { label: "Gallery", ariaLabel: "View our gallery", link: "/gallery" },
+  { label: "Contact", ariaLabel: "Get in touch", link: "/contact" },
 ]
-
-const containerVariants = {
-  closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
-  },
-  open: {
-    transition: { staggerChildren: 0.1, delayChildren: 0.3 },
-  },
-}
-
-const itemVariants = {
-  closed: { opacity: 0, y: -20 },
-  open: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } },
-}
 
 export default function Header() {
   const pathname = usePathname()
@@ -50,11 +37,11 @@ export default function Header() {
 
         <nav className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => {
-            const isActive = pathname === link.href
+            const isActive = pathname === link.link
             return (
               <Link
-                key={link.href}
-                href={link.href}
+                key={link.link}
+                href={link.link}
                 className={`relative group text-sm tracking-wider uppercase py-1 transition-colors ${
                   isActive ? "text-gold" : "text-cream/60 hover:text-cream"
                 }`}
@@ -78,7 +65,7 @@ export default function Header() {
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden relative z-50 w-11 h-11 flex flex-col items-center justify-center gap-[5px]"
+          className="md:hidden relative z-[60] w-11 h-11 flex flex-col items-center justify-center gap-[5px]"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
         >
@@ -97,51 +84,22 @@ export default function Header() {
         </button>
       </div>
 
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-dark/95 backdrop-blur-2xl z-40 flex flex-col items-center justify-center md:hidden"
-          >
-            <motion.nav
-              variants={containerVariants}
-              initial="closed"
-              animate="open"
-              exit="closed"
-              className="flex flex-col items-center gap-8"
-            >
-              {navLinks.map((link) => {
-                const isActive = pathname === link.href
-                return (
-                  <motion.div key={link.href} variants={itemVariants}>
-                    <Link
-                      href={link.href}
-                      onClick={() => setMobileOpen(false)}
-                      className={`text-3xl font-serif tracking-tight transition-colors ${
-                        isActive ? "text-gold" : "text-cream/70 hover:text-cream"
-                      }`}
-                    >
-                      {link.label}
-                    </Link>
-                  </motion.div>
-                )
-              })}
-              <motion.div variants={itemVariants} className="mt-4">
-                <Link
-                  href="/contact"
-                  onClick={() => setMobileOpen(false)}
-                  className="inline-block px-8 py-3.5 bg-gold text-dark text-sm font-medium tracking-wider uppercase hover:bg-gold/90 transition-all"
-                >
-                  Visit
-                </Link>
-              </motion.div>
-            </motion.nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div className="md:hidden">
+        <StaggeredMenu
+          isFixed
+          items={navLinks}
+          menuOpen={mobileOpen}
+          onToggle={() => setMobileOpen(!mobileOpen)}
+          hideHeader
+          position="right"
+          colors={['#800020', '#800020', '#2A1510']}
+          menuButtonColor="#FFF8E7"
+          openMenuButtonColor="#FFF8E7"
+          accentColor="#D4AF37"
+          displayItemNumbering
+          displaySocials={false}
+        />
+      </div>
     </header>
   )
 }
