@@ -2,9 +2,9 @@ import Link from "next/link"
 import Image from "next/image"
 
 const socialLinks = [
-  { label: "Facebook", href: "#", icon: "/icons/facebook.svg" },
-  { label: "Instagram", href: "#", icon: "/icons/instagram.svg" },
-  { label: "YouTube", href: "#", icon: "/icons/youtube.svg" },
+  { label: "Facebook", href: "#", icon: "/icon/Facebook.png" },
+  { label: "Instagram", href: "#", icon: "/icon/instagram.png" },
+  { label: "YouTube", href: "#", icon: "/icon/youtube.png" },
 ]
 
 const quickLinks = [
@@ -37,7 +37,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Image src={s.icon} alt="" width={16} height={16} className="opacity-60 hover:opacity-100 transition-opacity" />
+                  <Image src={s.icon} alt="" width={18} height={18} className="opacity-60 hover:opacity-100 transition-opacity object-contain" />
                 </a>
               ))}
             </div>
