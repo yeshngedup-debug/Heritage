@@ -13,8 +13,11 @@
   --stone-light: #A89880;
   --saffron: #F4A900;
   --charcoal: #1A1A1A;
+  --cinnabar: #E34234;
+  --cinnabar-light: #E85D50;
   --border-light: rgba(139, 125, 107, 0.15);
   --border-dark: rgba(255, 248, 231, 0.1);
+  --gold-glow: 0 0 20px rgba(212, 175, 55, 0.3), 0 0 40px rgba(212, 175, 55, 0.15);
 }
 
 @theme inline {
@@ -30,8 +33,11 @@
   --color-stone-light: var(--stone-light);
   --color-saffron: var(--saffron);
   --color-charcoal: var(--charcoal);
+  --color-cinnabar: var(--cinnabar);
+  --color-cinnabar-light: var(--cinnabar-light);
   --font-sans: var(--font-geist-sans);
   --font-serif: var(--font-playfair);
+  --font-display: var(--font-cinzel);
 }
 
 html {
@@ -54,3 +60,121 @@ body {
   letter-spacing: 0.15em;
   color: var(--gold);
 }
+
+.section-eyebrow {
+  font-family: var(--font-geist-mono, monospace);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: var(--font-playfair), serif;
+  font-size: 2.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.gold-glow {
+  text-shadow: var(--gold-glow);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background: var(--gold);
+  color: var(--dark);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--gold-light);
+  box-shadow: var(--gold-glow);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border: 1px solid var(--cream);
+  color: var(--cream);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 248, 231, 0.05);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.content-card {
+  background: var(--cream);
+  border: 1px solid var(--border-light);
+  transition: all 0.4s ease;
+}
+
+.content-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.1);
+  transform: translateY(-2px);
+}
+
+.transition-gold {
+  transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transition-gold:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+.noise-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.015;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: overlay;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@utility animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@utility animate-shimmer {
+  animation: shimmer 3s linear infinite;
+  background-size: 200% auto;
+}
+
+

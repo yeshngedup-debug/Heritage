@@ -4,7 +4,7 @@ import Footer from "@/components/Footer"
 import GalleryGrid from "@/components/GalleryGrid"
 
 export const metadata: Metadata = {
-  title: "Gallery | Phudro Goenpa",
+  title: "Gallery",
   description: "Explore the visual journey of Phudro Goenpa — sacred monastery, prayer flags, Himalayan views, and Paro Valley.",
 }
 
@@ -14,17 +14,19 @@ export default function GalleryPage() {
       <Header />
       <main className="min-h-screen bg-dark">
         <section className="pt-44 pb-28 md:pb-40">
-          <div className="mx-auto max-w-7xl px-8 mb-16">
-            <span className="section-number flex items-center gap-3 mb-8">
-              <span className="text-gold font-mono text-sm tracking-[0.2em]">02</span>
-              <span className="h-px w-8 bg-gold/30" />
-              <span className="text-cream/40 text-xs tracking-[0.2em] uppercase">Gallery</span>
+          <div className="mx-auto max-w-7xl px-6 md:px-8 mb-16">
+            <span className="section-eyebrow flex items-center gap-3 mb-6">
+              <span className="h-px w-8 bg-gold/40" />
+              Gallery
             </span>
-            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-cream leading-[1.1] tracking-tight">
+            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-cream leading-[1.1] tracking-tight mb-6">
               Visual
               <br />
               <span className="text-gold">Journey</span>
             </h1>
+            <p className="text-cream/50 text-base md:text-lg max-w-xl leading-relaxed">
+              Through the lens — moments captured from the monastery, the valley, and the sky
+            </p>
           </div>
           <GalleryGrid />
         </section>

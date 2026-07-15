@@ -2,13 +2,13 @@ import FadeIn from "@/components/FadeIn"
 
 export default function MonasterySection() {
   return (
-    <section id="about" className="bg-cream py-28 md:py-40 scroll-mt-32">
-      <div className="mx-auto max-w-7xl px-8">
+    <section id="about" className="bg-cream py-28 md:py-40 scroll-mt-32 relative">
+      <div className="mx-auto max-w-7xl px-6 md:px-8">
         <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
           <FadeIn>
             <div className="space-y-8">
-              <span className="section-number flex items-center gap-3">
-                <span className="text-gold font-mono text-sm tracking-[0.2em]">01</span>
+              <span className="flex items-center gap-3">
+                <span className="text-gold font-mono text-sm tracking-[0.2em]">01 /</span>
                 <span className="h-px w-8 bg-gold/40" />
                 <span className="text-stone text-xs tracking-[0.2em] uppercase">The Monastery</span>
               </span>
@@ -33,22 +33,29 @@ export default function MonasterySection() {
             </div>
           </FadeIn>
 
-          <FadeIn delay={0.15}>
+          <FadeIn delay={0.15} direction="right">
             <div className="relative">
-              <div className="aspect-[4/5] overflow-hidden">
+              <div className="aspect-[4/5] overflow-hidden relative">
                 <div
                   className="w-full h-full bg-cover bg-bottom hover:scale-105 transition-transform duration-700"
                   style={{
-                    backgroundImage:
-                      "url('/images/sections/Cloud.jpg')",
+                    backgroundImage: "url('/images/sections/Cloud.jpg')",
                   }}
                 />
               </div>
+
+              <div className="absolute -top-3 -right-3 w-16 h-16">
+                <div className="absolute top-0 right-0 w-10 h-px bg-gold/50" />
+                <div className="absolute top-0 right-0 w-px h-10 bg-gold/50" />
+              </div>
+
               <div className="absolute -bottom-4 -left-4 w-24 h-24 border border-gold/30" />
             </div>
           </FadeIn>
         </div>
       </div>
+
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-px h-32 bg-gold/10 hidden md:block" />
     </section>
   )
 }

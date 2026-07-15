@@ -17,15 +17,14 @@ export default function StonePillarSection() {
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 border border-gold/20" />
+              <div className="absolute -top-4 -left-4 w-12 h-12 border-t border-l border-gold/10" />
             </div>
           </FadeIn>
 
           <FadeIn delay={0.15}>
             <div className="space-y-8 order-1 md:order-2">
               <span className="section-number flex items-center gap-3">
-                <span className="text-gold font-mono text-sm tracking-[0.2em]">02</span>
-                <span className="h-px w-8 bg-gold/30" />
-                <span className="text-cream/40 text-xs tracking-[0.2em] uppercase">Ancient Artifact</span>
+                <span className="text-gold font-mono text-sm tracking-[0.2em]">02 / ANCIENT ARTIFACT</span>
               </span>
               <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-cream leading-[1.1] tracking-tight">
                 The Stone

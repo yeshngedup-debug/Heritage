@@ -13,9 +13,7 @@ export default function FlyingStupaSection() {
           <FadeIn>
             <div className="space-y-8">
               <span className="section-number flex items-center gap-3">
-                <span className="text-gold font-mono text-sm tracking-[0.2em]">03</span>
-                <span className="h-px w-8 bg-gold/40" />
-                <span className="text-stone text-xs tracking-[0.2em] uppercase">Sacred Legend</span>
+                <span className="text-gold font-mono text-sm tracking-[0.2em]">03 / SACRED LEGEND</span>
               </span>
               <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-dark leading-[1.1] tracking-tight">
                 The Legend of
@@ -40,10 +38,11 @@ export default function FlyingStupaSection() {
 
           <FadeIn delay={0.15}>
             <div className="relative">
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--gold)_0%,_transparent_70%)] opacity-20 blur-2xl" />
               <motion.div
                 animate={prefersReduced ? {} : { y: [0, -12, 0] }}
                 transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-                className="aspect-square overflow-hidden"
+                className="aspect-square overflow-hidden relative"
               >
                 <div
                   className="w-full h-full bg-cover bg-center"
