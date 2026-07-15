@@ -180,6 +180,31 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  position: relative;
+}
+
+.sm-panel-close {
+  position: absolute;
+  top: -2.8em;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 2px solid #800020;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #800020;
+  transition: all 0.25s ease;
+  z-index: 15;
+}
+
+.sm-panel-close:hover {
+  background: #800020;
+  color: #FFFFFF;
+  transform: scale(1.08);
 }
 
 .sm-socials {

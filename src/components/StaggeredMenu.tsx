@@ -470,6 +470,13 @@ export default function StaggeredMenu({
       )}
       <aside id="staggered-menu-panel" ref={panelRef} className="staggered-menu-panel" aria-hidden={!open}>
         <div className="sm-panel-inner">
+          {hideHeader && (
+            <button className="sm-panel-close" onClick={() => closeMenu()} aria-label="Close menu" type="button">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                <path d="M5 5l12 12M17 5L5 17" />
+              </svg>
+            </button>
+          )}
           <ul className="sm-panel-list" role="list" data-numbering={displayItemNumbering || undefined}>
             {items && items.length ? (
               items.map((it, idx) => (
