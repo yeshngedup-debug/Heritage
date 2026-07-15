@@ -1,9 +1,10 @@
 import Link from "next/link"
+import Image from "next/image"
 
 const socialLinks = [
-  { label: "Facebook", href: "#" },
-  { label: "Instagram", href: "#" },
-  { label: "YouTube", href: "#" },
+  { label: "Facebook", href: "#", icon: "/icons/facebook.svg" },
+  { label: "Instagram", href: "#", icon: "/icons/instagram.svg" },
+  { label: "YouTube", href: "#", icon: "/icons/youtube.svg" },
 ]
 
 const quickLinks = [
@@ -32,11 +33,11 @@ export default function Footer() {
                   key={s.label}
                   href={s.href}
                   aria-label={s.label}
-                  className="w-10 h-10 border border-gold/20 flex items-center justify-center text-cream/50 text-xs hover:border-gold hover:text-gold transition-colors"
+                  className="w-10 h-10 border border-gold/20 flex items-center justify-center text-cream/50 hover:border-gold hover:text-gold transition-colors p-2.5"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {s.label.charAt(0)}
+                  <Image src={s.icon} alt="" width={16} height={16} className="opacity-60 hover:opacity-100 transition-opacity" />
                 </a>
               ))}
             </div>
