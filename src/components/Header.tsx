@@ -92,10 +92,10 @@ export default function Header() {
           onToggle={() => setMobileOpen(!mobileOpen)}
           hideHeader
           position="right"
-          colors={['#800020', '#800020', '#2A1510']}
+          colors={['#D4AF37', '#FFF8E7', '#E8C84A']}
           menuButtonColor="#FFF8E7"
           openMenuButtonColor="#FFF8E7"
-          accentColor="#D4AF37"
+          accentColor="#800020"
           displayItemNumbering
           displaySocials={false}
         />
