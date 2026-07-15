@@ -12,9 +12,9 @@ export default function PrivacyPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-dark">
+      <main className="min-h-screen bg-dark overflow-hidden">
         <section className="pt-32 md:pt-44 pb-28 md:pb-40">
-          <div className="mx-auto max-w-3xl px-6 md:px-8">
+          <div className="mx-auto max-w-3xl px-5 md:px-8">
             <FadeIn>
               <span className="section-eyebrow flex items-center gap-3 mb-6">
                 <span className="h-px w-8 bg-gold/40" />

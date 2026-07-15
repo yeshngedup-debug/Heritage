@@ -45,9 +45,9 @@ export default function AboutPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-dark">
+      <main className="min-h-screen bg-dark overflow-hidden">
         <section className="pt-32 md:pt-44 pb-28 md:pb-40">
-          <div className="mx-auto max-w-7xl px-6 md:px-8">
+          <div className="mx-auto max-w-7xl px-5 md:px-8">
             <FadeIn>
               <div className="max-w-3xl mb-24">
                 <span className="section-eyebrow flex items-center gap-3 mb-6">

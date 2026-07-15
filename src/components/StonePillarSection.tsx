@@ -2,7 +2,7 @@ import FadeIn from "@/components/FadeIn"
 
 export default function StonePillarSection() {
   return (
-    <section className="bg-dark py-20 md:py-28 lg:py-40">
+    <section className="bg-dark py-20 md:py-28 lg:py-40 overflow-hidden">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
           <FadeIn>
