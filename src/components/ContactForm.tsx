@@ -28,7 +28,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="border border-cream/10 p-8 md:p-10">
+    <div className="border border-cream/10 p-6 md:p-10">
       <h3 className="font-serif text-2xl text-cream mb-2">Send a Message</h3>
       <p className="text-cream/40 text-sm mb-8">
         We will respond to your inquiry as soon as possible.

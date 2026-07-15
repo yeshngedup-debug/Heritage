@@ -47,6 +47,7 @@ html {
 body {
   background: var(--cream);
   color: var(--dark);
+  overflow-x: hidden;
 }
 
 ::selection {

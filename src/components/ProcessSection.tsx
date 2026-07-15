@@ -47,7 +47,7 @@ function StepCard({
         initial={{ opacity: 0, y: 40 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, delay: index * 0.15, ease: [0.25, 0.1, 0.25, 1] }}
-        className="relative pl-16 md:pl-20 border-l border-gold/20 group-last:border-transparent pb-16 last:pb-0"
+        className="relative pl-14 md:pl-20 border-l border-gold/20 group-last:border-transparent pb-16 last:pb-0"
       >
         <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-dark-soft border-2 border-gold/60 flex items-center justify-center">
           <div className="w-2 h-2 rounded-full bg-gold" />
@@ -73,13 +73,13 @@ function StepCard({
 
 export default function ProcessSection() {
   return (
-    <section className="bg-dark-soft py-28 md:py-40 relative overflow-hidden">
+    <section className="bg-dark-soft py-20 md:py-28 lg:py-40 relative overflow-hidden">
       <div className="absolute inset-0 opacity-[0.02]">
         <div className="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-gold blur-[120px]" />
         <div className="absolute bottom-1/4 -right-32 w-80 h-80 rounded-full bg-maroon blur-[100px]" />
       </div>
 
-      <div className="mx-auto max-w-7xl px-8 relative z-10">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 relative z-10">
         <FadeIn>
           <div className="max-w-2xl mb-20">
             <span className="section-eyebrow flex items-center gap-3 mb-6">

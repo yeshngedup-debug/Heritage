@@ -13,7 +13,7 @@ export default function TermsPage() {
     <>
       <Header />
       <main className="min-h-screen bg-dark">
-        <section className="pt-44 pb-28 md:pb-40">
+        <section className="pt-32 md:pt-44 pb-28 md:pb-40">
           <div className="mx-auto max-w-3xl px-6 md:px-8">
             <FadeIn>
               <span className="section-eyebrow flex items-center gap-3 mb-6">

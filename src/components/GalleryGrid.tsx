@@ -59,7 +59,7 @@ export default function GalleryGrid() {
 
   return (
     <>
-      <div className="flex flex-wrap justify-center gap-3 mb-14 px-8">
+      <div className="flex flex-wrap justify-center gap-3 mb-14 px-5 md:px-8">
         {categories.map((cat) => (
           <button
             key={cat}

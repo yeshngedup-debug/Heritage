@@ -76,16 +76,16 @@ export default function Hero() {
             sanctuary of ancient Buddhist tradition and Himalayan serenity.
           </motion.p>
 
-          <motion.div variants={childVariants} className="mt-12 flex gap-5">
+          <motion.div variants={childVariants} className="mt-12 flex flex-col sm:flex-row gap-4 sm:gap-5">
             <a
               href="#about"
-              className="px-8 py-4 bg-gold text-dark text-sm font-medium tracking-wider uppercase hover:bg-gold/90 transition-all"
+              className="px-8 py-4 bg-gold text-dark text-sm font-medium tracking-wider uppercase hover:bg-gold/90 transition-all w-full sm:w-auto"
             >
               Explore the Sanctuary
             </a>
             <a
               href="/gallery"
-              className="px-8 py-4 border border-cream/20 text-cream text-sm font-medium tracking-wider uppercase hover:bg-cream/5 transition-all"
+              className="px-8 py-4 border border-cream/20 text-cream text-sm font-medium tracking-wider uppercase hover:bg-cream/5 transition-all w-full sm:w-auto"
             >
               View Gallery
             </a>

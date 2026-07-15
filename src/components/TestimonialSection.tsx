@@ -41,7 +41,7 @@ function TestimonialCard({
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.15, ease: [0.25, 0.1, 0.25, 1] }}
-      className="bg-dark/50 backdrop-blur-sm border border-cream/5 p-10 md:p-12 relative group hover:border-gold/20 transition-colors duration-500"
+      className="bg-dark/50 backdrop-blur-sm border border-cream/5 p-8 md:p-12 relative group hover:border-gold/20 transition-colors duration-500"
     >
       <span className="font-serif text-6xl leading-none text-gold/10 absolute top-6 right-8 select-none">
         &ldquo;
@@ -66,10 +66,10 @@ function TestimonialCard({
 
 export default function TestimonialSection() {
   return (
-    <section className="bg-dark py-28 md:py-40 relative">
+    <section className="bg-dark py-20 md:py-28 lg:py-40 relative">
       <div className="absolute inset-0 noise-overlay" />
 
-      <div className="mx-auto max-w-7xl px-8 relative z-10">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 relative z-10">
         <FadeIn>
           <div className="text-center mb-20">
             <span className="section-eyebrow flex items-center justify-center gap-3 mb-6">

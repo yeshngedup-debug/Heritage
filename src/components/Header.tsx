@@ -78,12 +78,12 @@ export default function Header() {
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden relative z-50 w-8 h-8 flex flex-col items-center justify-center gap-[5px]"
+          className="md:hidden relative z-50 w-11 h-11 flex flex-col items-center justify-center gap-[5px]"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
         >
           <motion.span
-            animate={mobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
+            animate={mobileOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
             className="w-6 h-px bg-cream block origin-center"
           />
           <motion.span
@@ -91,7 +91,7 @@ export default function Header() {
             className="w-6 h-px bg-cream block"
           />
           <motion.span
-            animate={mobileOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+            animate={mobileOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
             className="w-6 h-px bg-cream block origin-center"
           />
         </button>

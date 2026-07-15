@@ -2,8 +2,8 @@ import FadeIn from "@/components/FadeIn"
 
 export default function MonasterySection() {
   return (
-    <section id="about" className="bg-cream py-28 md:py-40 scroll-mt-32 relative">
-      <div className="mx-auto max-w-7xl px-6 md:px-8">
+    <section id="about" className="bg-cream py-20 md:py-28 lg:py-40 scroll-mt-32 relative">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
           <FadeIn>
             <div className="space-y-8">

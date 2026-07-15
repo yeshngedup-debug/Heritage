@@ -16,8 +16,8 @@ const quickLinks = [
 export default function Footer() {
   return (
     <footer className="bg-dark border-t border-gold/10">
-      <div className="mx-auto max-w-7xl px-6 md:px-8 py-16 md:py-20">
-        <div className="grid md:grid-cols-4 gap-12 md:gap-10">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-16 md:py-20">
+        <div className="grid md:grid-cols-4 gap-10 md:gap-10">
           <div className="space-y-5">
             <span className="text-cream text-lg tracking-[0.2em] font-mono">
               PHUDRO GOENPA<span className="text-gold">.</span>
@@ -32,7 +32,7 @@ export default function Footer() {
                   key={s.label}
                   href={s.href}
                   aria-label={s.label}
-                  className="w-10 h-10 border border-gold/20 flex items-center justify-center text-cream/50 hover:border-gold hover:text-gold transition-colors p-2.5"
+                  className="w-11 h-11 border border-gold/20 flex items-center justify-center text-cream/50 hover:border-gold hover:text-gold transition-colors p-2.5"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

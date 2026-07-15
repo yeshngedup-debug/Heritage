@@ -7,8 +7,8 @@ import { useReducedMotion } from "@/hooks/useReducedMotion"
 export default function FlyingStupaSection() {
   const prefersReduced = useReducedMotion()
   return (
-    <section className="bg-cream py-28 md:py-40 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-8">
+    <section className="bg-cream py-20 md:py-28 lg:py-40 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
           <FadeIn>
             <div className="space-y-8">

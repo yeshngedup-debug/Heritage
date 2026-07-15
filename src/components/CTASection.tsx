@@ -6,10 +6,10 @@ import FadeIn from "@/components/FadeIn"
 
 export default function CTASection() {
   return (
-    <section className="relative py-28 md:py-40 overflow-hidden bg-dark">
+    <section className="relative py-20 md:py-28 lg:py-40 overflow-hidden bg-dark">
       <div className="absolute inset-0">
         <div
-          className="h-full w-full bg-cover bg-center bg-fixed opacity-30"
+          className="h-full w-full bg-cover bg-center md:bg-fixed opacity-30"
           style={{
             backgroundImage:
               "url('/images/hero/MainGoenpa.jpg')",
@@ -46,10 +46,10 @@ export default function CTASection() {
             transition={{ delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-5"
           >
-            <Link href="/contact" className="btn-primary">
+            <Link href="/contact" className="btn-primary w-full sm:w-auto">
               Plan Your Visit
             </Link>
-            <Link href="/about" className="btn-outline">
+            <Link href="/about" className="btn-outline w-full sm:w-auto">
               Learn More
             </Link>
           </motion.div>

@@ -46,7 +46,7 @@ export default function AboutPage() {
     <>
       <Header />
       <main className="min-h-screen bg-dark">
-        <section className="pt-44 pb-28 md:pb-40">
+        <section className="pt-32 md:pt-44 pb-28 md:pb-40">
           <div className="mx-auto max-w-7xl px-6 md:px-8">
             <FadeIn>
               <div className="max-w-3xl mb-24">
@@ -80,7 +80,7 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="relative pl-10 md:pl-0">
+              <div className="relative md:pl-0">
                 <div className="absolute left-0 md:left-auto md:right-full md:mr-24 top-0 bottom-0 w-px bg-gradient-to-b from-gold/40 via-gold/10 to-transparent hidden md:block" />
 
                 {timeline.map((item, index) => (

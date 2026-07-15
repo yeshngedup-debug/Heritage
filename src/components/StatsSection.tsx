@@ -66,7 +66,7 @@ function AnimatedStat({
 export default function StatsSection() {
   return (
     <section className="bg-dark-soft border-y border-gold/10 py-20 md:py-24">
-      <div className="mx-auto max-w-6xl px-6 md:px-8">
+      <div className="mx-auto max-w-6xl px-5 md:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0">
           {stats.map((stat, i) => (
             <div key={stat.label} className="md:border-r border-gold/10 last:border-r-0">
