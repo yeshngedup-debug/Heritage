@@ -86,11 +86,7 @@ export default function StaggeredMenu({
     const ctx = gsap.context(() => {
       const panel = panelRef.current
       const preContainer = preLayersRef.current
-      const plusH = plusHRef.current
-      const plusV = plusVRef.current
-      const icon = iconRef.current
-      const textInner = textInnerRef.current
-      if (!panel || !plusH || !plusV || !icon || !textInner) return
+      if (!panel) return
 
       let preLayers: HTMLElement[] = []
       if (preContainer) {
@@ -103,10 +99,15 @@ export default function StaggeredMenu({
       if (preContainer) {
         gsap.set(preContainer, { xPercent: 0, opacity: 1 })
       }
-      gsap.set(plusH, { transformOrigin: '50% 50%', rotate: 0 })
-      gsap.set(plusV, { transformOrigin: '50% 50%', rotate: 90 })
-      gsap.set(icon, { rotate: 0, transformOrigin: '50% 50%' })
-      gsap.set(textInner, { yPercent: 0 })
+
+      const plusH = plusHRef.current
+      const plusV = plusVRef.current
+      const icon = iconRef.current
+      const textInner = textInnerRef.current
+      if (plusH) gsap.set(plusH, { transformOrigin: '50% 50%', rotate: 0 })
+      if (plusV) gsap.set(plusV, { transformOrigin: '50% 50%', rotate: 90 })
+      if (icon) gsap.set(icon, { rotate: 0, transformOrigin: '50% 50%' })
+      if (textInner) gsap.set(textInner, { yPercent: 0 })
       if (toggleBtnRef.current) gsap.set(toggleBtnRef.current, { color: menuButtonColor })
     })
     return () => ctx.revert()
@@ -398,14 +399,10 @@ export default function StaggeredMenu({
     if (!closeOnClickAway || !open) return
 
     const handleClickOutside = (event: MouseEvent) => {
-      if (
-        panelRef.current &&
-        !panelRef.current.contains(event.target as Node) &&
-        toggleBtnRef.current &&
-        !toggleBtnRef.current.contains(event.target as Node)
-      ) {
-        closeMenu()
-      }
+      if (!panelRef.current) return
+      if (panelRef.current.contains(event.target as Node)) return
+      if (toggleBtnRef.current && toggleBtnRef.current.contains(event.target as Node)) return
+      closeMenu()
     }
 
     document.addEventListener('mousedown', handleClickOutside)

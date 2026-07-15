@@ -3,12 +3,12 @@
 import './GlassIcons.css'
 
 const gradientMapping: Record<string, string> = {
-  blue: 'linear-gradient(hsl(223, 90%, 50%), hsl(208, 90%, 50%))',
-  purple: 'linear-gradient(hsl(283, 90%, 50%), hsl(268, 90%, 50%))',
-  red: 'linear-gradient(hsl(3, 90%, 50%), hsl(348, 90%, 50%))',
-  indigo: 'linear-gradient(hsl(253, 90%, 50%), hsl(238, 90%, 50%))',
-  orange: 'linear-gradient(hsl(43, 90%, 50%), hsl(28, 90%, 50%))',
-  green: 'linear-gradient(hsl(123, 90%, 40%), hsl(108, 90%, 40%))',
+  maroon: 'linear-gradient(hsl(350, 80%, 25%), hsl(350, 80%, 15%))',
+  gold: 'linear-gradient(hsl(43, 60%, 52%), hsl(43, 60%, 35%))',
+  saffron: 'linear-gradient(hsl(35, 100%, 48%), hsl(35, 100%, 35%))',
+  cream: 'linear-gradient(hsl(44, 60%, 90%), hsl(44, 60%, 80%))',
+  cinnabar: 'linear-gradient(hsl(5, 75%, 54%), hsl(5, 75%, 40%))',
+  stone: 'linear-gradient(hsl(35, 10%, 45%), hsl(35, 10%, 30%))',
 }
 
 export interface GlassIconsItem {
