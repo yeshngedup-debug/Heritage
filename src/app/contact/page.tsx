@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const contactInfo = [
   { label: "Location", value: "Paro Valley, Bhutan", icon: "◇" },
   { label: "Email", value: "hello@phudrogoenpa.heritage", icon: "◇" },
-  { label: "Phone", value: "+975 17 323 883", icon: "◇" },
+  { label: "Phone", value: "975 77300860", icon: "◇" },
   { label: "Social", value: "Instagram / Facebook", icon: "◇" },
 ]
 
