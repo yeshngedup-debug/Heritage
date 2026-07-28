@@ -27,11 +27,11 @@ export default function Header() {
   }, [mobileOpen])
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-dark/70 backdrop-blur-xl border-b border-gold/10">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-dark/70 backdrop-blur-xl border-b border-accent/10">
       <div className="mx-auto max-w-7xl flex items-center justify-between px-6 md:px-8 py-4">
         <Link href="/" className="flex items-center gap-2 group">
           <span className="text-cream text-lg tracking-[0.2em] font-mono group-hover:text-cream transition-colors">
-            PHUDRO GOENPA<span className="text-gold">.</span>
+            PHUDRO GOENPA<span className="text-accent">.</span>
           </span>
         </Link>
 
@@ -43,12 +43,12 @@ export default function Header() {
                 key={link.link}
                 href={link.link}
                 className={`relative group text-sm tracking-wider uppercase py-1 transition-colors ${
-                  isActive ? "text-gold" : "text-cream/60 hover:text-cream"
+                  isActive ? "text-accent" : "text-cream/60 hover:text-cream"
                 }`}
               >
                 {link.label}
                 <span
-                  className={`absolute -bottom-px left-0 h-px bg-gold transition-all duration-300 ${
+                  className={`absolute -bottom-px left-0 h-px bg-accent transition-all duration-300 ${
                     isActive ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 />
@@ -57,7 +57,7 @@ export default function Header() {
           })}
           <Link
             href="/contact"
-            className="px-6 py-2.5 bg-gold text-dark text-sm font-medium tracking-wider uppercase hover:bg-gold/90 transition-all"
+            className="px-6 py-2.5 bg-accent text-dark text-sm font-medium tracking-wider uppercase hover:bg-accent/90 transition-all"
           >
             Visit
           </Link>
@@ -92,10 +92,10 @@ export default function Header() {
           onToggle={() => setMobileOpen(!mobileOpen)}
           hideHeader
           position="right"
-          colors={['#D4AF37', '#FFF8E7', '#E8C84A']}
-          menuButtonColor="#FFF8E7"
-          openMenuButtonColor="#FFF8E7"
-          accentColor="#800020"
+          colors={['#ffffff', '#ffffff', '#ffffff']}
+          menuButtonColor="#ffffff"
+          openMenuButtonColor="#ffffff"
+          accentColor="#000000"
           displayItemNumbering
           displaySocials={false}
         />

@@ -15,12 +15,12 @@ const quickLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-dark border-t border-gold/10">
+    <footer className="bg-dark border-t border-accent/10">
       <div className="mx-auto max-w-7xl px-5 md:px-8 py-16 md:py-20">
         <div className="grid md:grid-cols-4 gap-10 md:gap-10">
           <div className="space-y-5">
             <span className="text-cream text-lg tracking-[0.2em] font-mono">
-              PHUDRO GOENPA<span className="text-gold">.</span>
+              PHUDRO GOENPA<span className="text-accent">.</span>
             </span>
             <p className="text-cream/40 text-sm leading-relaxed max-w-xs">
               A sacred monument of Bhutanese Buddhist heritage, perched on the
@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-gold/60 text-xs tracking-[0.2em] uppercase mb-6 font-mono">
+            <h4 className="text-accent/60 text-xs tracking-[0.2em] uppercase mb-6 font-mono">
               Quick Links
             </h4>
             <div className="flex flex-col gap-3">
@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-gold/60 text-xs tracking-[0.2em] uppercase mb-6 font-mono">
+            <h4 className="text-accent/60 text-xs tracking-[0.2em] uppercase mb-6 font-mono">
               Contact
             </h4>
             <div className="space-y-4 text-cream/40 text-sm">
@@ -80,7 +80,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-gold/60 text-xs tracking-[0.2em] uppercase mb-6 font-mono">
+            <h4 className="text-accent/60 text-xs tracking-[0.2em] uppercase mb-6 font-mono">
               Newsletter
             </h4>
             <p className="text-cream/40 text-sm leading-relaxed mb-5">
@@ -90,12 +90,12 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Your email"
-                className="flex-1 px-4 py-3 bg-dark-soft border border-gold/20 text-cream text-sm placeholder:text-cream/25 outline-none focus:border-gold/50 transition-colors"
+                className="flex-1 px-4 py-3 bg-dark-soft border border-accent/20 text-cream text-sm placeholder:text-cream/25 outline-none focus:border-accent/50 transition-colors"
                 aria-label="Email for newsletter"
               />
               <button
                 type="submit"
-                className="px-5 py-3 bg-gold text-dark text-xs font-medium tracking-wider uppercase hover:bg-gold/90 transition-all shrink-0"
+                className="px-5 py-3 bg-accent text-dark text-xs font-medium tracking-wider uppercase hover:bg-accent/90 transition-all shrink-0"
               >
                 Subscribe
               </button>
@@ -103,7 +103,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 pt-8 border-t border-gold/10 flex flex-col md:flex-row items-center justify-between gap-4 text-cream/30 text-xs">
+        <div className="mt-14 pt-8 border-t border-accent/10 flex flex-col md:flex-row items-center justify-between gap-4 text-cream/30 text-xs">
           <p>&copy; {new Date().getFullYear()} Phudro Goenpa Heritage. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-cream/60 transition-colors">Privacy Policy</Link>

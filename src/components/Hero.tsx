@@ -42,7 +42,7 @@ export default function Hero() {
       </motion.div>
 
       <div className="absolute top-8 left-6 md:top-12 md:left-10 z-20">
-        <span className="text-gold/60 text-xs tracking-[0.25em] uppercase font-mono">
+        <span className="text-accent/60 text-xs tracking-[0.25em] uppercase font-mono">
           Sacred Heritage of Bhutan
         </span>
       </div>
@@ -58,17 +58,17 @@ export default function Hero() {
           className="flex flex-col items-center"
         >
           <motion.div variants={childVariants} className="flex items-center gap-3 mb-6">
-            <span className="h-px w-6 bg-gold/60" />
-            <span className="text-gold/80 text-xs md:text-sm tracking-[0.3em] uppercase font-mono">
+            <span className="h-px w-6 bg-accent/60" />
+            <span className="text-accent/80 text-xs md:text-sm tracking-[0.3em] uppercase font-mono">
               DISCOVER
             </span>
-            <span className="h-px w-6 bg-gold/60" />
+            <span className="h-px w-6 bg-accent/60" />
           </motion.div>
 
           <motion.h1 variants={childVariants} className="font-serif text-5xl md:text-7xl lg:text-8xl text-cream max-w-5xl leading-[1.1] tracking-tight">
             Phudro
             <br />
-            <span className="text-gold">Goenpa</span>
+            <span className="text-accent">Goenpa</span>
           </motion.h1>
 
           <motion.p variants={childVariants} className="mt-8 text-base md:text-lg text-cream/60 max-w-xl leading-relaxed">
@@ -79,7 +79,7 @@ export default function Hero() {
           <motion.div variants={childVariants} className="mt-12 flex flex-col sm:flex-row gap-4 sm:gap-5">
             <a
               href="#about"
-              className="px-8 py-4 bg-gold text-dark text-sm font-medium tracking-wider uppercase hover:bg-gold/90 transition-all w-full sm:w-auto"
+              className="px-8 py-4 bg-accent text-dark text-sm font-medium tracking-wider uppercase hover:bg-accent/90 transition-all w-full sm:w-auto"
             >
               Explore the Sanctuary
             </a>

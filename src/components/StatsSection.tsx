@@ -47,11 +47,11 @@ function AnimatedStat({
         className="relative py-8 md:py-10"
       >
         {stat.value !== null ? (
-          <motion.div className="font-serif text-4xl md:text-5xl text-gold mb-2 group-hover:scale-110 transition-transform duration-500 origin-center">
+          <motion.div className="font-serif text-4xl md:text-5xl text-accent mb-2 group-hover:scale-110 transition-transform duration-500 origin-center">
             {formatted}
           </motion.div>
         ) : (
-          <div className="font-serif text-4xl md:text-5xl text-gold mb-2 group-hover:scale-110 transition-transform duration-500">
+          <div className="font-serif text-4xl md:text-5xl text-accent mb-2 group-hover:scale-110 transition-transform duration-500">
             {stat.display}
           </div>
         )}
@@ -65,11 +65,11 @@ function AnimatedStat({
 
 export default function StatsSection() {
   return (
-    <section className="bg-dark-soft border-y border-gold/10 py-20 md:py-24">
+    <section className="bg-dark-soft border-y border-accent/10 py-20 md:py-24">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0">
           {stats.map((stat, i) => (
-            <div key={stat.label} className="md:border-r border-gold/10 last:border-r-0">
+            <div key={stat.label} className="md:border-r border-accent/10 last:border-r-0">
               <AnimatedStat stat={stat} index={i} />
             </div>
           ))}

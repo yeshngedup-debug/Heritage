@@ -17,13 +17,13 @@ export default function PrivacyPage() {
           <div className="mx-auto max-w-3xl px-5 md:px-8">
             <FadeIn>
               <span className="section-eyebrow flex items-center gap-3 mb-6">
-                <span className="h-px w-8 bg-gold/40" />
+                <span className="h-px w-8 bg-accent/40" />
                 Legal
               </span>
               <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-cream leading-[1.1] tracking-tight mb-12">
                 Privacy
                 <br />
-                <span className="text-gold">Policy</span>
+                <span className="text-accent">Policy</span>
               </h1>
             </FadeIn>
             <div className="space-y-6 text-cream/50 text-base leading-relaxed">

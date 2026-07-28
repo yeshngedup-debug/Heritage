@@ -16,13 +16,13 @@ export default function GalleryPage() {
         <section className="pt-32 md:pt-44 pb-28 md:pb-40">
           <div className="mx-auto max-w-7xl px-5 md:px-8 mb-16">
             <span className="section-eyebrow flex items-center gap-3 mb-6">
-              <span className="h-px w-8 bg-gold/40" />
+              <span className="h-px w-8 bg-accent/40" />
               Gallery
             </span>
             <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-cream leading-[1.1] tracking-tight mb-6">
               Visual
               <br />
-              <span className="text-gold">Journey</span>
+              <span className="text-accent">Journey</span>
             </h1>
             <p className="text-cream/50 text-base md:text-lg max-w-xl leading-relaxed">
               Through the lens — moments captured from the monastery, the valley, and the sky
