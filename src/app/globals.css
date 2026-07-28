@@ -1,28 +1,40 @@
 @import "tailwindcss";
 
 :root {
-  --accent: #C51D34;
-  --cream: #F5F5F5;
-  --cream-dark: #E8E8E8;
-  --dark: #000000;
-  --dark-soft: #0A0A0A;
-  --stone: #808080;
-  --stone-light: #999999;
-  --charcoal: #111111;
-  --border-light: rgba(128, 128, 128, 0.15);
-  --border-dark: rgba(255, 255, 255, 0.1);
-  --accent-glow: 0 0 20px rgba(197, 29, 52, 0.2), 0 0 40px rgba(197, 29, 52, 0.1);
+  --maroon: #800020;
+  --maroon-light: #A52A2A;
+  --gold: #D4AF37;
+  --gold-light: #E8C84A;
+  --cream: #FFF8E7;
+  --cream-dark: #F5EDD6;
+  --dark: #1A0F0A;
+  --dark-soft: #2A1F1A;
+  --stone: #8B7D6B;
+  --stone-light: #A89880;
+  --saffron: #F4A900;
+  --charcoal: #1A1A1A;
+  --cinnabar: #E34234;
+  --cinnabar-light: #E85D50;
+  --border-light: rgba(139, 125, 107, 0.15);
+  --border-dark: rgba(255, 248, 231, 0.1);
+  --gold-glow: 0 0 20px rgba(212, 175, 55, 0.3), 0 0 40px rgba(212, 175, 55, 0.15);
 }
 
 @theme inline {
-  --color-accent: var(--accent);
+  --color-maroon: var(--maroon);
+  --color-maroon-light: var(--maroon-light);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
   --color-cream: var(--cream);
   --color-cream-dark: var(--cream-dark);
   --color-dark: var(--dark);
   --color-dark-soft: var(--dark-soft);
   --color-stone: var(--stone);
   --color-stone-light: var(--stone-light);
+  --color-saffron: var(--saffron);
   --color-charcoal: var(--charcoal);
+  --color-cinnabar: var(--cinnabar);
+  --color-cinnabar-light: var(--cinnabar-light);
   --font-sans: var(--font-geist-sans);
   --font-serif: var(--font-playfair);
   --font-display: var(--font-cinzel);
@@ -40,22 +52,22 @@ body {
 }
 
 ::selection {
-  background: var(--accent);
-  color: var(--cream);
+  background: var(--gold);
+  color: var(--dark);
 }
 
 .section-number {
   font-family: var(--font-geist-mono, monospace);
   font-size: 0.75rem;
   letter-spacing: 0.15em;
-  color: var(--accent);
+  color: var(--gold);
 }
 
 .section-eyebrow {
   font-family: var(--font-geist-mono, monospace);
   font-size: 0.7rem;
   letter-spacing: 0.2em;
-  color: var(--accent);
+  color: var(--gold);
   text-transform: uppercase;
 }
 
@@ -66,8 +78,8 @@ body {
   letter-spacing: -0.02em;
 }
 
-.accent-glow {
-  text-shadow: var(--accent-glow);
+.gold-glow {
+  text-shadow: var(--gold-glow);
 }
 
 .btn-primary {
@@ -75,26 +87,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 1rem 2rem;
-  background: var(--accent);
-  color: white;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-  background: #A0172A;
-  box-shadow: var(--accent-glow);
-}
-
-.btn-outline {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 2rem;
-  border: 1px solid var(--dark);
+  background: var(--gold);
   color: var(--dark);
   font-size: 0.875rem;
   font-weight: 500;
@@ -103,10 +96,29 @@ body {
   transition: all 0.3s ease;
 }
 
+.btn-primary:hover {
+  background: var(--gold-light);
+  box-shadow: var(--gold-glow);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border: 1px solid var(--cream);
+  color: var(--cream);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
 .btn-outline:hover {
-  background: rgba(197, 29, 52, 0.05);
-  border-color: var(--accent);
-  color: var(--accent);
+  background: rgba(255, 248, 231, 0.05);
+  border-color: var(--gold);
+  color: var(--gold);
 }
 
 .content-card {
@@ -116,25 +128,25 @@ body {
 }
 
 .content-card:hover {
-  border-color: var(--accent);
-  box-shadow: 0 8px 30px rgba(197, 29, 52, 0.08);
+  border-color: var(--gold);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.1);
   transform: translateY(-2px);
 }
 
-.transition-accent {
+.transition-gold {
   transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.transition-accent:hover {
-  color: var(--accent);
-  border-color: var(--accent);
+.transition-gold:hover {
+  color: var(--gold);
+  border-color: var(--gold);
 }
 
 .noise-overlay::after {
   content: '';
   position: absolute;
   inset: 0;
-  opacity: 0.02;
+  opacity: 0.015;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 256px 256px;
@@ -166,3 +178,5 @@ body {
   animation: shimmer 3s linear infinite;
   background-size: 200% auto;
 }
+
+

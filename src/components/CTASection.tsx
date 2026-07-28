@@ -23,15 +23,15 @@ export default function CTASection() {
       <div className="mx-auto max-w-4xl px-8 relative z-10 text-center">
         <FadeIn>
           <span className="section-eyebrow flex items-center justify-center gap-3 mb-6">
-            <span className="h-px w-8 bg-accent/40" />
+            <span className="h-px w-8 bg-gold/40" />
             Begin Your Pilgrimage
-            <span className="h-px w-8 bg-accent/40" />
+            <span className="h-px w-8 bg-gold/40" />
           </span>
 
           <h2 className="font-serif text-4xl md:text-5xl lg:text-7xl text-cream leading-[1.1] tracking-tight mb-6">
             Embark on a
             <br />
-            <span className="text-accent accent-glow">Sacred Journey</span>
+            <span className="text-gold gold-glow">Sacred Journey</span>
           </h2>
 
           <p className="text-cream/50 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-12">

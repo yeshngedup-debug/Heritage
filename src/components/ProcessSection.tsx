@@ -47,13 +47,13 @@ function StepCard({
         initial={{ opacity: 0, y: 40 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, delay: index * 0.15, ease: [0.25, 0.1, 0.25, 1] }}
-        className="relative pl-14 md:pl-20 border-l border-accent/20 group-last:border-transparent pb-16 last:pb-0"
+        className="relative pl-14 md:pl-20 border-l border-gold/20 group-last:border-transparent pb-16 last:pb-0"
       >
-        <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-dark-soft border-2 border-accent/60 flex items-center justify-center">
-          <div className="w-2 h-2 rounded-full bg-accent" />
+        <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-dark-soft border-2 border-gold/60 flex items-center justify-center">
+          <div className="w-2 h-2 rounded-full bg-gold" />
         </div>
 
-        <span className="font-mono text-xs tracking-[0.25em] text-accent/60 mb-3 block">
+        <span className="font-mono text-xs tracking-[0.25em] text-gold/60 mb-3 block">
           {step.number}
         </span>
 
@@ -65,7 +65,7 @@ function StepCard({
           {step.description}
         </p>
 
-        <div className="absolute -bottom-4 left-0 w-full h-px bg-gradient-to-r from-accent/20 via-accent/10 to-transparent opacity-0 group-last:hidden md:group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="absolute -bottom-4 left-0 w-full h-px bg-gradient-to-r from-gold/20 via-gold/10 to-transparent opacity-0 group-last:hidden md:group-hover:opacity-100 transition-opacity duration-500" />
       </motion.div>
     </div>
   )
@@ -75,21 +75,21 @@ export default function ProcessSection() {
   return (
     <section className="bg-dark-soft py-20 md:py-28 lg:py-40 relative overflow-hidden">
       <div className="absolute inset-0 opacity-[0.02]">
-        <div className="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-accent blur-[120px]" />
-        <div className="absolute bottom-1/4 -right-32 w-80 h-80 rounded-full bg-accent blur-[100px]" />
+        <div className="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-gold blur-[120px]" />
+        <div className="absolute bottom-1/4 -right-32 w-80 h-80 rounded-full bg-maroon blur-[100px]" />
       </div>
 
       <div className="mx-auto max-w-7xl px-5 md:px-8 relative z-10">
         <FadeIn>
           <div className="max-w-2xl mb-20">
             <span className="section-eyebrow flex items-center gap-3 mb-6">
-              <span className="h-px w-8 bg-accent/40" />
+              <span className="h-px w-8 bg-gold/40" />
               The Journey
             </span>
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-cream leading-[1.1] tracking-tight">
               The Path to
               <br />
-              <span className="text-accent">Phudro Goenpa</span>
+              <span className="text-gold">Phudro Goenpa</span>
             </h2>
             <p className="text-cream/50 text-base md:text-lg leading-relaxed mt-6 max-w-xl">
               A pilgrimage is not merely a walk — it is a transformation. Each step on the

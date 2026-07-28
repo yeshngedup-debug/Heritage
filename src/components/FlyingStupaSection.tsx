@@ -13,12 +13,12 @@ export default function FlyingStupaSection() {
           <FadeIn>
             <div className="space-y-8">
               <span className="section-number flex items-center gap-3">
-                <span className="text-accent font-mono text-sm tracking-[0.2em]">03 / SACRED LEGEND</span>
+                <span className="text-gold font-mono text-sm tracking-[0.2em]">03 / SACRED LEGEND</span>
               </span>
               <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-dark leading-[1.1] tracking-tight">
                 The Legend of
                 <br />
-                <span className="text-accent">the Flying Stupa</span>
+                <span className="text-maroon">the Flying Stupa</span>
               </h2>
               <div className="space-y-5 text-dark/60 leading-relaxed text-base md:text-lg">
                 <p>
@@ -38,7 +38,7 @@ export default function FlyingStupaSection() {
 
           <FadeIn delay={0.15}>
             <div className="relative">
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--accent)_0%,_transparent_70%)] opacity-20 blur-2xl" />
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--gold)_0%,_transparent_70%)] opacity-20 blur-2xl" />
               <motion.div
                 animate={prefersReduced ? {} : { y: [0, -12, 0] }}
                 transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
@@ -52,7 +52,7 @@ export default function FlyingStupaSection() {
                   }}
                 />
               </motion.div>
-              <div className="absolute -top-8 -right-8 w-40 h-40 rounded-full bg-accent/5 blur-3xl" />
+              <div className="absolute -top-8 -right-8 w-40 h-40 rounded-full bg-gold/5 blur-3xl" />
             </div>
           </FadeIn>
         </div>

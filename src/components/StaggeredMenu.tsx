@@ -40,16 +40,16 @@ interface StaggeredMenuProps {
 
 export default function StaggeredMenu({
   position = 'right',
-  colors = ['#000000', '#0a0a0a'],
+  colors = ['#800020', '#1A0F0A'],
   items = [],
   socialItems = [],
   displaySocials = true,
   displayItemNumbering = true,
   className,
   logoUrl = '',
-  menuButtonColor = '#ffffff',
-  openMenuButtonColor = '#ffffff',
-  accentColor = '#000000',
+  menuButtonColor = '#FFF8E7',
+  openMenuButtonColor = '#FFF8E7',
+  accentColor = '#D4AF37',
   changeMenuColorOnOpen = true,
   isFixed = false,
   closeOnClickAway = true,
@@ -420,7 +420,7 @@ export default function StaggeredMenu({
     >
       <div ref={preLayersRef} className="sm-prelayers" aria-hidden="true">
         {(() => {
-          const raw = colors && colors.length ? colors.slice(0, 4) : ['#000000', '#0a0a0a']
+          const raw = colors && colors.length ? colors.slice(0, 4) : ['#1e1e22', '#35353c']
           let arr = [...raw]
           if (arr.length >= 3) {
             const mid = Math.floor(arr.length / 2)

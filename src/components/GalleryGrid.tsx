@@ -66,7 +66,7 @@ export default function GalleryGrid() {
             onClick={() => { setActiveCategory(cat); setSelected(null) }}
             className={`px-5 py-2 text-xs tracking-[0.2em] uppercase font-mono transition-all duration-500 ${
               activeCategory === cat
-                ? "text-accent border-b border-accent"
+                ? "text-gold border-b border-gold"
                 : "text-cream/30 hover:text-cream/60 border-b border-transparent"
             }`}
           >

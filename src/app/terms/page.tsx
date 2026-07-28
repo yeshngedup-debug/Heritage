@@ -17,13 +17,13 @@ export default function TermsPage() {
           <div className="mx-auto max-w-3xl px-5 md:px-8">
             <FadeIn>
               <span className="section-eyebrow flex items-center gap-3 mb-6">
-                <span className="h-px w-8 bg-accent/40" />
+                <span className="h-px w-8 bg-gold/40" />
                 Legal
               </span>
               <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-cream leading-[1.1] tracking-tight mb-12">
                 Terms of
                 <br />
-                <span className="text-accent">Service</span>
+                <span className="text-gold">Service</span>
               </h1>
             </FadeIn>
             <div className="space-y-6 text-cream/50 text-base leading-relaxed">

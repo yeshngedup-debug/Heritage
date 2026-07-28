@@ -51,13 +51,13 @@ export default function AboutPage() {
             <FadeIn>
               <div className="max-w-3xl mb-24">
                 <span className="section-eyebrow flex items-center gap-3 mb-6">
-                  <span className="h-px w-8 bg-accent/40" />
+                  <span className="h-px w-8 bg-gold/40" />
                   About
                 </span>
                 <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-cream leading-[1.1] tracking-tight mb-8">
                   The History of
                   <br />
-                  <span className="text-accent">Phudro Goenpa</span>
+                  <span className="text-gold">Phudro Goenpa</span>
                 </h1>
                 <p className="text-cream/50 text-base md:text-lg leading-relaxed max-w-2xl">
                   For over a millennium, this sacred monastery has watched over the Paro Valley from its
@@ -76,19 +76,19 @@ export default function AboutPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent" />
                   </div>
-                  <div className="absolute -bottom-4 -left-4 w-32 h-32 border border-accent/20" />
+                  <div className="absolute -bottom-4 -left-4 w-32 h-32 border border-gold/20" />
                 </div>
               </div>
 
               <div className="relative md:pl-0">
-                <div className="absolute left-0 md:left-auto md:right-full md:mr-24 top-0 bottom-0 w-px bg-gradient-to-b from-accent/40 via-accent/10 to-transparent hidden md:block" />
+                <div className="absolute left-0 md:left-auto md:right-full md:mr-24 top-0 bottom-0 w-px bg-gradient-to-b from-gold/40 via-gold/10 to-transparent hidden md:block" />
 
                 {timeline.map((item, index) => (
                   <FadeIn key={item.era} delay={index * 0.1}>
                     <div className="relative pb-16 last:pb-0">
-                      <div className="absolute -left-14 top-1 w-3 h-3 rounded-full bg-accent border-2 border-dark hidden md:block" />
+                      <div className="absolute -left-14 top-1 w-3 h-3 rounded-full bg-gold border-2 border-dark hidden md:block" />
 
-                      <span className="font-mono text-xs tracking-[0.25em] text-accent/60 mb-3 block">
+                      <span className="font-mono text-xs tracking-[0.25em] text-gold/60 mb-3 block">
                         {item.era}
                       </span>
                       <h2 className="font-serif text-2xl md:text-3xl text-cream mb-4 tracking-tight leading-[1.2]">
